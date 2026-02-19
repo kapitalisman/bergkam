@@ -34,5 +34,9 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
-STATIC_PATHS = ["images", "admin"]
+STATIC_PATHS = ["images", "admin", "CNAME"]
 ARTICLE_EXCLUDES = ["admin"]
+
+EXTRA_PATH_METADATA = {
+    "CNAME": {"path": "CNAME"},
+}

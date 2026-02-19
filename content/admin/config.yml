@@ -4,6 +4,12 @@ backend:
   branch: main
   identity_url: https://auth.decapbridge.com/sites/f6fb4069-235a-413c-96c5-8d90653fe2bf
   gateway_url: https://gateway.decapbridge.com
+  commit_messages:
+    create: Create {{collection}} {{slug}}
+    update: Update {{collection}} {{slug}}
+    delete: Delete {{collection}} {{slug}}
+    uploadMedia: Upload {{path}}
+    deleteMedia: Delete {{path}}
 
 logo:
   src: https://decapbridge.com/decapcms-with-bridge.svg
