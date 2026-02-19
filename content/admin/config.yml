@@ -5,21 +5,33 @@ backend:
   identity_url: https://auth.decapbridge.com/sites/f6fb4069-235a-413c-96c5-8d90653fe2bf
   gateway_url: https://gateway.decapbridge.com
 
-logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+logo:
+  src: https://decapbridge.com/decapcms-with-bridge.svg
+  show_in_header: true
+
 site_url: https://bergkam.nl
 
 media_folder: 'content/images'
 public_folder: '/images'
 
 collections:
-  - name: 'blog'
+  - name: 'posts'
     label: 'Posts'
+    label_singular: 'post'
+    description: 'Blog articles'
     folder: 'content'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    extension: 'md'
+    format: 'yaml-frontmatter'
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     fields:
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
-      - { label: 'Titel', name: 'title', widget: 'string' }
-      - { label: 'Datum', name: 'date', widget: 'datetime' }
-      - { label: 'Categorie', name: 'category', widget: 'string' }
-      - { label: 'Inhoud', name: 'body', widget: 'markdown' }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          date_format: 'YYYY-MM-DD',
+        }
+      - { label: 'Category', name: 'category', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
