@@ -1,6 +1,12 @@
 backend:
   name: git-gateway
+  repo: kapitalisman/bergkam
   branch: main
+  identity_url: https://auth.decapbridge.com/sites/f6fb4069-235a-413c-96c5-8d90653fe2bf
+  gateway_url: https://gateway.decapbridge.com
+
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+site_url: https://bergkam.nl
 
 media_folder: 'content/images'
 public_folder: '/images'
