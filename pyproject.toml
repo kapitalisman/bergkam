@@ -1,0 +1,28 @@
+[project]
+name = "bergkam"
+version = "0.1.0"
+description = "Blog over de Pacific Crest Trail."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "djlint>=1.36.4",
+    "pelican[markdown]>=4.11.0.post0",
+    "ruff>=0.15.1",
+]
+
+[tool.djlint]
+close_void_tags = true
+ignore = "H030,H031,T003"
+indent = 2
+max_line_length = 100
+preserve_blank_lines = true
+profile = "jinja"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+extend-select = ["I", "SIM"]
+
+[tool.ruff.lint.isort]
+force-single-line = true

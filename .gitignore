@@ -1,0 +1,8 @@
+# --- Pelican ---
+__pycache__/
+output/
+
+# --- Python ---
+.python-version
+.ruff_cache/
+.venv/
